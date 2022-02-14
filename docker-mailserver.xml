@@ -19,7 +19,11 @@
     <DonateLink/>
     <Description>docker-mailserver unRAID template</Description>
     <Labels/>
-
+    <Config Name="Mail data" Target="/var/mail/" Default="" Mode="rw" Description="Container Path: /var/mail/" Type="Path" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="Mail state" Target="/var/mail-state/" Default="" Mode="rw" Description="Container Path: /var/mail-state/" Type="Path" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="Mail logs" Target="/var/log/mail/" Default="" Mode="rw" Description="Container Path: /var/mail-logs/" Type="Path" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="config" Target="/tmp/docker-mailserver/" Default="" Mode="rw" Description="Container Path: /tmp/docker-mailserver" Type="Path" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="Localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /var/mail/" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
     <Config Name="OVERRIDE_HOSTNAME" Target="OVERRIDE_HOSTNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="DMS_DEBUG" Target="DMS_DEBUG" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
     <Config Name="SUPERVISOR_LOGLEVEL" Target="SUPERVISOR_LOGLEVEL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
@@ -33,11 +37,11 @@
     <Config Name="SPOOF_PROTECTION" Target="SPOOF_PROTECTION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="ENABLE_SRS" Target="ENABLE_SRS" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
     <Config Name="ENABLE_POP3" Target="ENABLE_POP3" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-    <Config Name="ENABLE_CLAMAV" Target="ENABLE_CLAMAV" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+    <Config Name="ENABLE_CLAMAV" Target="ENABLE_CLAMAV" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
     <Config Name="ENABLE_AMAVIS" Target="ENABLE_AMAVIS" Default="1" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
     <Config Name="AMAVIS_LOGLEVEL" Target="AMAVIS_LOGLEVEL" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
     <Config Name="ENABLE_DNSBL" Target="ENABLE_DNSBL"  Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-    <Config Name="ENABLE_FAIL2BAN" Target="ENABLE_FAIL2BAN" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+    <Config Name="ENABLE_FAIL2BAN" Target="ENABLE_FAIL2BAN" Default="0" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
     <Config Name="FAIL2BAN_BLOCKTYPE" Target="FAIL2BAN_BLOCKTYPE" Default="drop" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">drop</Config>
     <Config Name="ENABLE_MANAGESIEVE" Target="ENABLE_MANAGESIEVE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="POSTSCREEN_ACTION" Target="POSTSCREEN_ACTION" Default="enforce" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">enforce</Config>
@@ -115,4 +119,5 @@
     <Config Name="RELAY_PORT" Target="RELAY_PORT" Default="25" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">25</Config>
     <Config Name="RELAY_USER" Target="RELAY_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="RELAY_PASSWORD" Target="RELAY_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+
 </Container>
