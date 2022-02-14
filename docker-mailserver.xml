@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>docker-mailserver</Name>
-    <Repository>tiredofit/freescout:latest</Repository>
+    <Repository>docker.io/mailserver/docker-mailserver:latest</Repository>
     <Registry>https://hub.docker.com/r/mailserver/docker-mailserver/</Registry>
     <Network>bridge</Network>
     <Shell>sh</Shell>
@@ -11,8 +11,8 @@
     <Overview>A fullstack but simple mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.). Only configuration files, no SQL database. Keep it simple and versioned. Easy to deploy and upgrade.</Overview>
     <Category>Productivity: Network:Messenger</Category>
     <WebUI/>
-    <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/freescout.xml</TemplateURL>
-    <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/freescout.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/fibble/unraid-templates/main/docker-mailserver.xml</TemplateURL>
+    <Icon />
     <ExtraParams>--cap-add NET_ADMIN --cap-add SYS_PTRACE --hostname mail.yourdomain.com</ExtraParams>
     <PostArgs/>
     <DonateText/>
